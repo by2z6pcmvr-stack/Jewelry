@@ -1,31 +1,131 @@
-/*  The * below is used as a universal selector, so it creates default settings for your site */
-* {
-    font-size: 12pt;
-    line-height: 14pt;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    background: #c3c3b7;
+    font-family: sans-serif;
+    padding: 2rem;
 }
 
-/* font-face is used to use your own custom, non-systems fonts. place file in resources folder, same has this index.css file*/
-@font-face {
-    font-family: "";
-    src: url(./);
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+    font-family: 'Times New Roman', Times, serif;
+    margin:auto;
+    display:block;
+    text-align: center;
+    width:50vw;
+}
+p::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #736357;
+float: left;
+font-size: 74pt;
+margin-right: 8;
+line-height: 0;
 }
 
 p {
-    font-size: 12pt;
-    line-height: 14pt;
-    font-family: 'Courier New', Courier, monospace, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#736357;
+    font-family: Baskerville;
+    font-weight: 6;
+    font-size: 18pt;
 }
 
-/* how you want the structure of your submissions to appear below. display: grid; and display: flex; are good places to start */
+h1::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #736357;
+float: left;
+font-size: 74pt;
+margin-right: -.6em;
+line-height: 0.1;
+}
+
+h1 {
+    font-family: "ambroise-std", serif;
+font-weight: 400;
+font-style: italic;
+color: #736357;
+}
+
+a {
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 12pt;
+text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside dropdown content */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change background color of dropdown button on hover */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+a:visited {
+    color:rgb(117, 56, 56);
+    text-decoration: none;
+
+}
+
+a:hover {
+    color:rgb(222, 221, 209);
+    font-weight: 700;
+
+}
 .grid {
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-/* how do you want each individual submission to appear? do they have a border: 1px black solid; etc. a different font-family, font-size or color? */
-.grid div {
-
+.response {
+    border: 2px solid hotpink;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    width: 200px;
 }
-
-/* some other things you should consider for css styling are: 
-html, <h1>, <p>, <div>, .classes, #IDs, img, a */
