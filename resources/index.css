@@ -1,7 +1,15 @@
 body {
     background: #c3c3b7;
     font-family: sans-serif;
-    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+header {
+  text-align: left;
+    justify-content: left;
+    padding-left: 0%;
 }
 
 ul {
@@ -15,15 +23,20 @@ ul {
     margin:auto;
     display:block;
     text-align: center;
-    width:50vw;
+    width:40vw;
+    white-space: nowrap;   /* Prevents text from wrapping */
+    overflow: hidden;      /* Hides overflow if text is too long */
+    text-overflow: ellipsis; /* Adds "..." if text overflows */
 }
+
+
 p::first-letter {
 font-family: "sloop-script-one", sans-serif;
 font-weight: 500;
 font-style: normal;
 color: #736357;
-float: left;
-font-size: 74pt;
+float: auto;
+font-size: 50pt;
 margin-right: 8;
 line-height: 0;
 }
@@ -38,61 +51,78 @@ p {
 h1::first-letter {
 font-family: "sloop-script-one", sans-serif;
 font-weight: 500;
-font-style: normal;
+font-style: auto;
 color: #736357;
-float: left;
+float: auto;
 font-size: 74pt;
-margin-right: -.6em;
-line-height: 0.1;
+margin-right: 1;
+line-height: 1;
+}
+h1, h2 {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
 }
 
 h1 {
-    font-family: "ambroise-std", serif;
+    font-family: Baskerville;
+    font-style: italic;
+font-weight: 400;
+font-style: italic;
+color: #736357;
+}
+
+h2 {
+    font-family: Baskerville;
+    font-style: italic;
+    font-size: 18pt;
 font-weight: 400;
 font-style: italic;
 color: #736357;
 }
 
 a {
-font-family: Georgia, 'Times New Roman', Times, serif;
+font-family: Baskerville;
 font-size: 12pt;
 text-decoration: none;
 }
 
 .dropdown {
-  position: relative;
+  position: auto;
+  margin-left: 3pt;
 }
 
 /* Style the dropdown button */
 .dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
+  background-color: #c3c3b700;
+color: #736357;
+font-family: Baskerville;
+font-style: italic;
+font-weight: 0;
+  padding: none;
+  font-size: 20px;
   border: none;
   cursor: pointer;
+  margin-left: 3pt;
 }
 
 /* Dropdown content */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  font-family: Baskerville;
+  font-size: 12pt;
+  font-style: italic;
+  color: #736357;
   min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 /* Links inside dropdown content */
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+color: #736357;
+  padding: 6px;
   text-decoration: none;
   display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #f1f1f1
 }
 
 /* Show the dropdown content on hover */
@@ -102,7 +132,7 @@ text-decoration: none;
 
 /* Change background color of dropdown button on hover */
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: #d0d4d0;
 }
 
 a:visited {
@@ -129,3 +159,20 @@ a:hover {
     border-radius: 8px;
     width: 200px;
 }
+.container {
+  display: flex;
+}
+
+.container div {
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.body-text {
+Display: block;
+Margin: auto;
+Width: 60vw;
+}
+
+

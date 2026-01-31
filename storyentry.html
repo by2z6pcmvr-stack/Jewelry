@@ -6,18 +6,19 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>"jewelry box | an archive"</title>
    <link rel="stylesheet" href="./resources/storyentry.css"> <!--this links your HTML file to your CSS style sheet in resources folder-->
+   <link rel="stylesheet" href="https://use.typekit.net/nqp2fva.css">
+   <link rel="stylesheet" href="https://use.typekit.net/nqp2fva.css">
    <link rel="icon" type="image/x-icon" href="./resources/"> <!--In href="" after resources, type in your file name to link an image for your favicon-->
 </head>
 
 <body>
 <!--If you want to have a header with a graphic 'logo' you make for your archive, a link or menu to navigate to other page(s)-->
 <header>
-   <h1>title here</h1>
+   <h1>TELL ME A STORY OR MEMORY YOU TIE TO JEWELRY</h1>
 </header>
 
 <!--Make sure you keep the class below titled grid and know that this is where your submissions will load-->
    <div class="grid"></div>
-
 
 <!-- ****************************************************************************
 Below is javascript for connecting your google sheet to autopopulate the HTML-->
@@ -43,7 +44,7 @@ fetch(url)
     data.forEach(entry => {
       const section = document.createElement("section");
       section.innerHTML = `
-        <p>${entry.frequency}</p>
+        <p>${entry.story}</p>
         <p>${entry.place}</p>
         <p>${entry.elements}</p>
       `;

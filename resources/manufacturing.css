@@ -1,0 +1,78 @@
+body {
+    background: #dac8ba;
+    font-family: sans-serif;
+    padding: 2rem;
+}
+.main {
+    font-family: 'Times New Roman', Times, serif;
+    margin:auto;
+    display:block;
+    text-align: center;
+    width:50vw;
+}
+p::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: auto;
+color: #736357;
+float: left;
+font-size: 50pt;
+margin-right: 1px;
+line-height: 1;
+}
+
+p {
+    color:#736357;
+    font-family: Baskerville;
+    font-weight: 6;
+    font-size: 18pt;
+}
+
+h1::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #736357;
+float: left;
+font-size: 74pt;
+margin-right: -.6em;
+line-height: 0.1;
+}
+
+h1 {
+    font-family: "ambroise-std", serif;
+font-weight: 400;
+font-style: italic;
+color: #736357;
+}
+
+a {
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 22pt;
+text-decoration: none;
+}
+
+a:visited {
+    color:black;
+    text-decoration: none;
+
+}
+
+a:hover {
+    color:rgb(222, 221, 209);
+    font-weight: 700;
+
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.response {
+    border: 2px solid hotpink;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    width: 200px;
+}
