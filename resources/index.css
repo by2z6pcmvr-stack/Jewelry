@@ -29,7 +29,6 @@ ul {
     text-overflow: ellipsis; /* Adds "..." if text overflows */
 }
 
-
 p::first-letter {
 font-family: "sloop-script-one", sans-serif;
 font-weight: 500;
@@ -147,6 +146,7 @@ a:hover {
 
 }
 .grid {
+  position:relative;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -160,11 +160,15 @@ a:hover {
     width: 200px;
 }
 .container {
+  position: center;
+  content: width 1800px, height 900px;
   display: flex;
 }
 
 .container div {
   margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
   padding: 10px;
   font-size: 30px;
 }
