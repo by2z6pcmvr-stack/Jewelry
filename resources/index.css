@@ -243,6 +243,9 @@ img {vertical-align: middle;}
   max-width: 500px;
   position: relative;
   margin: auto;
+  border: 10px solid #736357; /* Border stroke */
+    border-radius: 4px;       /* Optional rounded corners */
+    box-sizing: border-box; 
 }
 
 /* Caption text */
@@ -260,7 +263,7 @@ img {vertical-align: middle;}
 .numbertext {
   color: #d0d4d0;
   font-family: Baskerville;
-  font-size: 8px;
+  font-size: 12pt;
   padding: 8px 12px;
   position: absolute;
   top: 0;
