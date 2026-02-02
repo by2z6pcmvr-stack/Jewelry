@@ -293,3 +293,58 @@ img {vertical-align: middle;}
   from {opacity: .4} 
   to {opacity: 1}
 }
+
+.button {
+background-color: #04AA6D;
+border: none;
+color: white;
+padding: 30px 120px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 50% / 50%;
+stroke-width: 2pt;
+}
+
+.btn-link {
+ display: inline-block;
+padding: 10px 20px;
+background-color: transparent;
+color: #736357;
+text-decoration: none;
+border-radius: 5px;
+font-family: Baskerville;
+font-size: 19px; 
+stroke-width: 2pt;
+padding: 30px 120px;
+border-radius: 50% / 50%;
+}
+
+.btn-link::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #736357;
+float: auto;
+font-size: 50pt;
+margin-right: 8;
+line-height: 0;
+}
+
+ .btn-link:hover {
+background-color: #736357;
+}
+
+.btn-link::first-letter:hover {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #d0d4d0;
+float: auto;
+font-size: 50pt;
+margin-right: 8;
+line-height: 0;
+}
