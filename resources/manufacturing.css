@@ -29,7 +29,7 @@ p {
     color:#736357;
     font-family: Baskerville;
     font-weight: 6;
-    font-size: 18pt;
+    font-size: 12pt;
 }
 
 h1::first-letter {
@@ -351,6 +351,8 @@ line-height: 0;
 
 .response-box {
   display: flex;
+  font-family: baskerville;
+  font-size: 12pt;
   flex-direction: column;
   justify-content: space-between;
   border: 1px dotted #736357;
@@ -358,11 +360,7 @@ line-height: 0;
   margin: 0.5rem;
   width: 320px;          
   min-height: 380px;    
-  background: rgba(255, 255, 255, 0.2); /* subtle card feel */
-}
-
-.response-card .container1 {
-  border-bottom: 1px dotted #736357;
+  background: rgba(255, 255, 255, 0.2); 
 }
 
 .response-card .container2 {
