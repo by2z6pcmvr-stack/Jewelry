@@ -8,8 +8,12 @@ body {
     margin:auto;
     display:block;
     text-align: center;
-    width:50vw;
+    width:40vw;
+    white-space: nowrap;   /* Prevents text from wrapping */
+    overflow: hidden;      /* Hides overflow if text is too long */
+    text-overflow: ellipsis; /* Adds "..." if text overflows */
 }
+
 p::first-letter {
 font-family: "sloop-script-one", sans-serif;
 font-weight: 500;
@@ -63,14 +67,6 @@ a:hover {
     font-weight: 700;
 
 }
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    stroke:black;
-    border-color: black;
-    border-style: dotted;
-}
 
 .dropdown-content {
   display: none;
@@ -89,19 +85,6 @@ color: #736357;
   text-decoration: none;
   display: block;
 }
-
-/* Show the dropdown content on hover */
-.dropdown:hover 
-
-.dropdown-content {  display: none;
-  position: absolute;
-  font-family: Baskerville;
-  font-size: 12pt;
-  font-style: italic;
-  color: #736357;
-  min-width: 200px;
-}
-
 
 /* Change background color of dropdown button on hover */
 .dropdown:hover .dropbtn {
@@ -133,48 +116,18 @@ font-weight: 0;
   cursor: pointer;
   margin-left: 3pt;
 }
-.container1 {
+.box {
     font-size: 40pt;
-    font-family: baskerville;
-    text-align:right;
-    font-variant: small-caps;
-    font-style:italic;
-    color:#736357;
-    border-color: #736357;
-    padding: 3pc
-}
-.container1:first-letter {
-font-family: "sloop-script-one", sans-serif;
-font-weight: 500;
-font-style: normal;
-color: #736357;
-float: auto;
-font-size: 50pt;
-margin-right: 8;
-line-height: 0;
-}
-
-.container2 {
-    font-size: 30pt;
     font-family: baskerville;
     text-align:center;
     font-variant: small-caps;
     font-style:italic;
     color:#736357;
     border-color: #736357;
+    container: 60px;
     padding: 3pc
 }
 
-.container3 {
-    font-size: 20pt;
-    font-family: baskerville;
-    text-align:left;
-    font-variant: small-caps;
-    font-style:italic;
-    color:#736357;
-    border-color: #736357;
-    padding: 3pc
-}
 body {
     font-family: sans-serif;
     text-align: center;
@@ -230,7 +183,18 @@ font-style: auto;
 color: #736357;
 float: auto;
 font-size: 74pt;
-margin-right: 1;
+margin-right: auto;
+line-height: 0;
+}
+
+h2::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: auto;
+color: #736357;
+float: auto;
+font-size: 40pt;
+margin-right: 2px;
 line-height: 1;
 }
 h1, h2 {
@@ -241,10 +205,12 @@ h1, h2 {
 
 h1 {
     font-family: Baskerville;
-    font-style: italic;
+font-style: italic;
+font-size: 18pt;
 font-weight: 400;
 font-style: italic;
 color: #736357;
+margin-bottom: 20pt;
 }
 
 h2 {
@@ -307,7 +273,7 @@ color: #736357;
 
 /* Change background color of dropdown button on hover */
 .dropdown:hover .dropbtn {
-  background-color: #d0d4d0;
+  background-color: #d0d4d000;
 }
 
 a:visited {
@@ -321,69 +287,11 @@ a:hover {
     font-weight: 700;
 
 }
-.grid {
-  position:relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.response {
-    border: 2px solid hotpink;
-    padding: 1rem;
-    background: white;
-    border-radius: 8px;
-    width: 200px;
-}
-.container {
-  position: center;
-  content: width 1800px, height 900px;
-  display: flex;
-}
-
-.container div {
-  margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  font-size: 30px;
-}
 
 .body-text {
 Display: block;
 Margin: auto;
 Width: 60vw;
-}
-
-.image-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;   /* control size per image */
-  height: 100%;
-  margin-top: -160px;
-  margin-bottom: -160px;
-}
-
-/* each swap container */
-.image-swap {
-  position: relative;
-  width: 365px;   /* control size per image */
-  height: 585px;
-  gap: 3px;
-}
-
-/* all images stacked */
-.image-swap img {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 30px;
-  inset: 0;              /* shorthand for top/right/bottom/left: 0 */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .button {
@@ -439,4 +347,39 @@ float: auto;
 font-size: 50pt;
 margin-right: 8;
 line-height: 0;
+}
+
+.response-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px dotted #736357;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  width: 320px;          
+  min-height: 380px;    
+  background: rgba(255, 255, 255, 0.2); /* subtle card feel */
+}
+
+.response-card .container1 {
+  border-bottom: 1px dotted #736357;
+}
+
+.response-card .container2 {
+  border-bottom: 1px dotted #736357;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  grid-auto-rows: min-content;
+  align-items: start;
+}
+
+.response-card {
+  width: 100%;
+  max-width: 340px;
+  align-self: start;
+  margin: 0;
 }

@@ -8,7 +8,10 @@ body {
     margin:auto;
     display:block;
     text-align: center;
-    width:50vw;
+    width:40vw;
+    white-space: nowrap;   /* Prevents text from wrapping */
+    overflow: hidden;      /* Hides overflow if text is too long */
+    text-overflow: ellipsis; /* Adds "..." if text overflows */
 }
 
 p::first-letter {
@@ -36,7 +39,7 @@ font-style: auto;
 color: #736357;
 float: auto;
 font-size: 74pt;
-margin-right: 1;
+margin-right: 1px;
 line-height: 0.1;
 }
 
@@ -49,7 +52,7 @@ color: #736357;
 
 a {
 font-family: Georgia, 'Times New Roman', Times, serif;
-font-size: 22pt;
+font-size: 12pt;
 text-decoration: none;
 }
 
@@ -64,21 +67,28 @@ a:hover {
     font-weight: 700;
 
 }
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  font-family: Baskerville;
+  font-size: 12pt;
+  font-style: italic;
+  color: #736357;
+  min-width: 200px;
 }
 
-.response {
-    border: 2px solid hotpink;
-    padding: 1rem;
-    background: white;
-    border-radius: 8px;
-    width: 200px;
+/* Links inside dropdown content */
+.dropdown-content a {
+color: #736357;
+  padding: 6px;
+  text-decoration: none;
+  display: block;
 }
-.dropdown {
-  position: relative;
+
+/* Change background color of dropdown button on hover */
+.dropdown:hover .dropbtn {
+  background-color: #d0d4d000;
 }
 
 /* Style the dropdown button */
@@ -92,6 +102,149 @@ font-weight: 0;
   font-size: 20px;
   border: none;
   cursor: pointer;
+  margin-left: 3pt;
+}
+.dropbtn {
+  background-color: #c3c3b700;
+color: #736357;
+font-family: Baskerville;
+font-style: italic;
+font-weight: 0;
+  padding: none;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 3pt;
+}
+.box {
+    font-size: 40pt;
+    font-family: baskerville;
+    text-align:center;
+    font-variant: small-caps;
+    font-style:italic;
+    color:#736357;
+    border-color: #736357;
+    container: 60px;
+    padding: 3pc
+}
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    justify-content: center;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+header {
+  text-align: left;
+    justify-content: left;
+    padding-left: 0%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+    font-family: 'Times New Roman', Times, serif;
+    margin:auto;
+    display:block;
+    text-align: center;
+    width:40vw;
+    white-space: nowrap;   /* Prevents text from wrapping */
+    overflow: hidden;      /* Hides overflow if text is too long */
+    text-overflow: ellipsis; /* Adds "..." if text overflows */
+}
+
+p::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #736357;
+float: auto;
+font-size: 50pt;
+margin-right: 8;
+line-height: 0;
+}
+
+p {
+    color:#736357;
+    font-family: Baskerville;
+    font-weight: 6;
+    font-size: 18pt;
+}
+
+h1::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: auto;
+color: #736357;
+float: auto;
+font-size: 74pt;
+margin-right: auto;
+line-height: 0;
+}
+
+h2::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: auto;
+color: #736357;
+float: auto;
+font-size: 40pt;
+margin-right: 2px;
+line-height: 1;
+}
+h1, h2 {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+}
+
+h1 {
+    font-family: Baskerville;
+font-style: italic;
+font-size: 18pt;
+font-weight: 400;
+font-style: italic;
+color: #736357;
+margin-bottom: 20pt;
+}
+
+h2 {
+    font-family: Baskerville;
+    font-style: italic;
+    font-size: 18pt;
+font-weight: 400;
+font-style: italic;
+color: #736357;
+}
+
+a {
+font-family: Baskerville;
+font-size: 12pt;
+text-decoration: none;
+}
+
+.dropdown {
+  position: auto;
+  margin-left: 3pt;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #c3c3b700;
+color: #736357;
+font-family: Baskerville;
+font-style: italic;
+font-weight: 0;
+  padding: none;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 3pt;
 }
 
 /* Dropdown content */
@@ -120,257 +273,113 @@ color: #736357;
 
 /* Change background color of dropdown button on hover */
 .dropdown:hover .dropbtn {
-  background-color: #d0d4d0;
-}
-
-html {
-    font-size: 14px;
-    color:black;
-    margin: 2rem;
-}
-
-button:hover {
-    background: black;
-    color: white;
-    cursor: pointer;
-    transition: .4s ease-in-out;
-}
-
-a {
-    color: black;
+  background-color: #d0d4d000;
 }
 
 a:visited {
-    color: black;
-}
-  
-  #grid{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;left: 0;
-    box-sizing: border-box;
-    z-index: -1;
-    color: black;
-  }
-  
-  #grid .modal{
-    position: absolute;
-    text-align: center;
-    margin: .5rem;
-    cursor: pointer;
-  }
+    color:rgb(117, 56, 56);
+    text-decoration: none;
 
-  img.dot {
-  width: 60px;
-  height: 60px;
-  object-fit: cover; /* keeps the image from stretching */
-  cursor: pointer;
-  border-radius: 50%; /* optional: keeps them circular like the original dots */
 }
 
-  #look .modal .images {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    position: relative;
-    margin: auto;
-    align-items: center;
-  }
-  
-  #grid .modal[seen]{
-    opacity: 0.2;
-  }
-  
-  .modal .dot{
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+a:hover {
+    color:rgb(222, 221, 209);
+    font-weight: 700;
 
-  .modal .dot:hover{
-    color: rgba(0, 0, 0, 0.436);
-    transition: .4s ease-in-out;
-  }
-  
-  #grid .modal p {
-    display: none;
-    font-size: .6rem;
-    margin: 0;
-  }
-
-  
-  
-  
-  /* Look at a pearl */
-  
-  #look{
-    
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0; left: 0;
-    background: white;
-    color: black;
-    display: none;
-  }
-  
-  #look .wrapper{
-    position: absolute;
-    width: 50vw;
-    height: 80vh;
-    object-fit: fill;
-    object-position: top;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    padding: 1em;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  #look .modal{
-    text-align: center;
-  }
-
-  /* smartphone */
-@media only screen and (max-width: 1000px), (orientation: portrait) {
-
-
-    #look .wrapper{
-        width: 80vw;
-      }
-
-      .top {
-        left: 43vw;
-      }
 }
 
-html {
-    font-size: 14px;
-    color:black;
-    margin: 2rem;
+.body-text {
+Display: block;
+Margin: auto;
+Width: 60vw;
 }
 
-button:hover {
-    background: black;
-    color: white;
-    cursor: pointer;
-    transition: .4s ease-in-out;
+.button {
+background-color: #04AA6D;
+border: none;
+color: white;
+padding: 30px 120px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 50% / 50%;
+stroke-width: 2pt;
 }
 
-a {
-    color: black;
+.btn-link {
+ display: inline-block;
+padding: 10px 20px;
+background-color: transparent;
+color: #736357;
+text-decoration: none;
+border-radius: 5px;
+font-family: Baskerville;
+font-size: 19px; 
+stroke-width: 2pt;
+padding: 30px 120px;
+border-radius: 50% / 50%;
 }
 
-a:visited {
-    color: black;
-}
-  
-  #grid{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;left: 0;
-    box-sizing: border-box;
-    z-index: -1;
-    color: black;
-  }
-  
-  #grid .modal{
-    position: absolute;
-    text-align: center;
-    margin: .5rem;
-    cursor: pointer;
-  }
-
-  img.dot {
-  width: 60px;
-  height: 60px;
-  object-fit: cover; /* keeps the image from stretching */
-  cursor: pointer;
-  border-radius: 50%; /* optional: keeps them circular like the original dots */
+.btn-link::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #736357;
+float: auto;
+font-size: 50pt;
+margin-right: 8;
+line-height: 0;
 }
 
-  #look .modal .images {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    position: relative;
-    margin: auto;
-    align-items: center;
-  }
-  
-  #grid .modal[seen]{
-    opacity: 0.2;
-  }
-  
-  .modal .dot{
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+ .btn-link:hover {
+background-color: #736357;
+}
 
-  .modal .dot:hover{
-    color: rgba(0, 0, 0, 0.436);
-    transition: .4s ease-in-out;
-  }
-  
-  #grid .modal p {
-    display: none;
-    font-size: .6rem;
-    margin: 0;
-  }
+.btn-link::first-letter:hover {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #d0d4d0;
+float: auto;
+font-size: 50pt;
+margin-right: 8;
+line-height: 0;
+}
 
-  
-  
-  
-  /* Look at a pearl */
-  
-  #look{
-    
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0; left: 0;
-    background: white;
-    color: black;
-    display: none;
-  }
-  
-  #look .wrapper{
-    position: absolute;
-    width: 50vw;
-    height: 80vh;
-    object-fit: fill;
-    object-position: top;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    padding: 1em;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  #look .modal{
-    text-align: center;
-  }
+.response-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px dotted #736357;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  width: 320px;          
+  min-height: 380px;    
+  background: rgba(255, 255, 255, 0.2); /* subtle card feel */
+}
 
-  /* smartphone */
-@media only screen and (max-width: 1000px), (orientation: portrait) {
+.response-card .container1 {
+  border-bottom: 1px dotted #736357;
+}
 
+.response-card .container2 {
+  border-bottom: 1px dotted #736357;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  grid-auto-rows: min-content;
+  align-items: start;
+}
 
-    #look .wrapper{
-        width: 80vw;
-      }
-
-      .top {
-        left: 43vw;
-      }
+.response-card {
+  width: 100%;
+  max-width: 340px;
+  align-self: start;
+  margin: 0;
 }
