@@ -15,7 +15,7 @@ font-family: "sloop-script-one", sans-serif;
 font-weight: 500;
 font-style: auto;
 color: #736357;
-float: left;
+float: auto;
 font-size: 50pt;
 margin-right: 1px;
 line-height: 1;
@@ -31,11 +31,11 @@ p {
 h1::first-letter {
 font-family: "sloop-script-one", sans-serif;
 font-weight: 500;
-font-style: normal;
+font-style: auto;
 color: #736357;
-float: left;
+float: auto;
 font-size: 74pt;
-margin-right: -.6em;
+margin-right: 1px;
 line-height: 0.1;
 }
 
@@ -48,7 +48,7 @@ color: #736357;
 
 a {
 font-family: Georgia, 'Times New Roman', Times, serif;
-font-size: 22pt;
+font-size: 12pt;
 text-decoration: none;
 }
 
@@ -67,6 +67,265 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    stroke:black;
+    border-color: black;
+    border-style: dotted;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  font-family: Baskerville;
+  font-size: 12pt;
+  font-style: italic;
+  color: #736357;
+  min-width: 200px;
+}
+
+/* Links inside dropdown content */
+.dropdown-content a {
+color: #736357;
+  padding: 6px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover 
+
+.dropdown-content {  display: none;
+  position: absolute;
+  font-family: Baskerville;
+  font-size: 12pt;
+  font-style: italic;
+  color: #736357;
+  min-width: 200px;
+}
+
+
+/* Change background color of dropdown button on hover */
+.dropdown:hover .dropbtn {
+  background-color: #d0d4d000;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #c3c3b700;
+color: #736357;
+font-family: Baskerville;
+font-style: italic;
+font-weight: 0;
+  padding: none;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 3pt;
+}
+.dropbtn {
+  background-color: #c3c3b700;
+color: #736357;
+font-family: Baskerville;
+font-style: italic;
+font-weight: 0;
+  padding: none;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 3pt;
+}
+.container1 {
+    font-size: 40pt;
+    font-family: baskerville;
+    text-align:right;
+    font-variant: small-caps;
+    font-style:italic;
+    color:#736357;
+    border-color: #736357;
+    padding: 3pc
+}
+.container1:first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #736357;
+float: auto;
+font-size: 50pt;
+margin-right: 8;
+line-height: 0;
+}
+
+.container2 {
+    font-size: 30pt;
+    font-family: baskerville;
+    text-align:center;
+    font-variant: small-caps;
+    font-style:italic;
+    color:#736357;
+    border-color: #736357;
+    padding: 3pc
+}
+
+.container3 {
+    font-size: 20pt;
+    font-family: baskerville;
+    text-align:left;
+    font-variant: small-caps;
+    font-style:italic;
+    color:#736357;
+    border-color: #736357;
+    padding: 3pc
+}
+body {
+    font-family: sans-serif;
+    text-align: center;
+    justify-content: center;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+header {
+  text-align: left;
+    justify-content: left;
+    padding-left: 0%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+    font-family: 'Times New Roman', Times, serif;
+    margin:auto;
+    display:block;
+    text-align: center;
+    width:40vw;
+    white-space: nowrap;   /* Prevents text from wrapping */
+    overflow: hidden;      /* Hides overflow if text is too long */
+    text-overflow: ellipsis; /* Adds "..." if text overflows */
+}
+
+p::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #736357;
+float: auto;
+font-size: 50pt;
+margin-right: 8;
+line-height: 0;
+}
+
+p {
+    color:#736357;
+    font-family: Baskerville;
+    font-weight: 6;
+    font-size: 18pt;
+}
+
+h1::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: auto;
+color: #736357;
+float: auto;
+font-size: 74pt;
+margin-right: 1;
+line-height: 1;
+}
+h1, h2 {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+}
+
+h1 {
+    font-family: Baskerville;
+    font-style: italic;
+font-weight: 400;
+font-style: italic;
+color: #736357;
+}
+
+h2 {
+    font-family: Baskerville;
+    font-style: italic;
+    font-size: 18pt;
+font-weight: 400;
+font-style: italic;
+color: #736357;
+}
+
+a {
+font-family: Baskerville;
+font-size: 12pt;
+text-decoration: none;
+}
+
+.dropdown {
+  position: auto;
+  margin-left: 3pt;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #c3c3b700;
+color: #736357;
+font-family: Baskerville;
+font-style: italic;
+font-weight: 0;
+  padding: none;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 3pt;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  font-family: Baskerville;
+  font-size: 12pt;
+  font-style: italic;
+  color: #736357;
+  min-width: 200px;
+}
+
+/* Links inside dropdown content */
+.dropdown-content a {
+color: #736357;
+  padding: 6px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change background color of dropdown button on hover */
+.dropdown:hover .dropbtn {
+  background-color: #d0d4d0;
+}
+
+a:visited {
+    color:rgb(117, 56, 56);
+    text-decoration: none;
+
+}
+
+a:hover {
+    color:rgb(222, 221, 209);
+    font-weight: 700;
+
+}
+.grid {
+  position:relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .response {
@@ -75,4 +334,109 @@ a:hover {
     background: white;
     border-radius: 8px;
     width: 200px;
+}
+.container {
+  position: center;
+  content: width 1800px, height 900px;
+  display: flex;
+}
+
+.container div {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.body-text {
+Display: block;
+Margin: auto;
+Width: 60vw;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;   /* control size per image */
+  height: 100%;
+  margin-top: -160px;
+  margin-bottom: -160px;
+}
+
+/* each swap container */
+.image-swap {
+  position: relative;
+  width: 365px;   /* control size per image */
+  height: 585px;
+  gap: 3px;
+}
+
+/* all images stacked */
+.image-swap img {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  inset: 0;              /* shorthand for top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.button {
+background-color: #04AA6D;
+border: none;
+color: white;
+padding: 30px 120px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 50% / 50%;
+stroke-width: 2pt;
+}
+
+.btn-link {
+ display: inline-block;
+padding: 10px 20px;
+background-color: transparent;
+color: #736357;
+text-decoration: none;
+border-radius: 5px;
+font-family: Baskerville;
+font-size: 19px; 
+stroke-width: 2pt;
+padding: 30px 120px;
+border-radius: 50% / 50%;
+}
+
+.btn-link::first-letter {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #736357;
+float: auto;
+font-size: 50pt;
+margin-right: 8;
+line-height: 0;
+}
+
+ .btn-link:hover {
+background-color: #736357;
+}
+
+.btn-link::first-letter:hover {
+font-family: "sloop-script-one", sans-serif;
+font-weight: 500;
+font-style: normal;
+color: #d0d4d0;
+float: auto;
+font-size: 50pt;
+margin-right: 8;
+line-height: 0;
 }

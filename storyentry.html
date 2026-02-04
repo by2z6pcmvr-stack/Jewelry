@@ -9,7 +9,8 @@
    <link rel="stylesheet" href="https://use.typekit.net/nqp2fva.css">
    <link rel="stylesheet" href="https://use.typekit.net/nqp2fva.css">
    <link rel="icon" type="image/x-icon" href="./resources/"> <!--In href="" after resources, type in your file name to link an image for your favicon-->
-</head>
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
 
 <body>
 <!--If you want to have a header with a graphic 'logo' you make for your archive, a link or menu to navigate to other page(s)-->
@@ -17,46 +18,70 @@
    <h1>TELL ME A STORY OR MEMORY YOU TIE TO JEWELRY</h1>
 </header>
 
-<!--Make sure you keep the class below titled grid and know that this is where your submissions will load-->
-   <div class="grid"></div>
+<div id="grid" class="grid" style="position:relative; width:100%; height:80vh; border:1px solid #ccc;"></div>
 
-<!-- ****************************************************************************
-Below is javascript for connecting your google sheet to autopopulate the HTML-->
+<!-- Modal for showing dot details -->
+<div id="look" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+                      background: rgba(0,0,0,0.5); justify-content:center; align-items:center; display:flex;">
+  <div class="modal" style="background:#fff; padding:20px;">
+    <img class="dot" src="" style="width:150px; height:150px; object-fit:cover;" />
+    <p></p>
+    <button hide style="margin-top:10px;">Back</button>
+  </div>
+</div>
 
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Script to load sheet data and handle modal -->
 <script>
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 const SPREADSHEET_ID = "10rG4JpMF3pGn7wJUmvX8kzmUzkW83rPqar8RVag_kmc";
 const TAB_NAME = "Sheet1";
 
-const url = `https://opensheet.elk.sh/${SPREADSHEET_ID}/${TAB_NAME}`;
+$(document).ready(function () {
 
-fetch(url)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("Network response failed");
-    }
-    return response.json();
-  })
-  .then(data => {
+  // Load data from Google Sheet
+  $.getJSON(`https://opensheet.elk.sh/${SPREADSHEET_ID}/${TAB_NAME}`, function(data) {
     console.log("Loaded data:", data);
 
-    const grid = document.querySelector(".grid");
+    data.forEach(function(row, index) {
+      if(index === 0) return; // skip header
 
-    data.forEach(entry => {
-      const section = document.createElement("section");
-      section.innerHTML = `
-        <p>${entry.story}</p>
-        <p>${entry.place}</p>
-        <p>${entry.elements}</p>
-      `;
-      grid.appendChild(section);
+      // Create dot element
+      let div = $(`
+        <div class='modal' type='${row.type}' index='${index}' 
+             style='position:absolute; top:${getRandomInt(0,80)}%; left:${getRandomInt(0,90)}%'>
+          <img class='dot' src='${row.pearls}' alt='${row.pearls}' 
+               style='width:60px; height:60px; object-fit:cover; cursor:pointer;' />
+          <p>${row.msg}</p>
+        </div>
+      `);
+
+      // Add dot to grid
+      div.appendTo("#grid");
     });
-  })
-  .catch(error => {
-    console.error("Sheet failed to load:", error);
   });
+
+  // Click on dots to open modal
+  $("#grid").on("click", ".modal", function() {
+    let symbol = $(this).find(".dot").attr('src');
+    let msg = $(this).find("p").text(); 
+
+    $("#look .modal .dot").attr('src', symbol);
+    $("#look .modal p").text(msg); 
+    $("#look").css("display","flex"); // show modal
+  });
+
+  // Close modal when back button is clicked
+  $("#look").on("click", "button[hide]", function(){
+    $("#look").hide();
+  });
+});
 </script>
 
-
-<!--This code was provided in Avrie Allen's Wintersession course at RISD, Activating Networks, Gathering Knowledge and was initially inspired by Chia Amisola's sheet sites tutorial with Developh-->
 </body>
 </html>
